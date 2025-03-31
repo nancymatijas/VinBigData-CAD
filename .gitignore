@@ -1,0 +1,32 @@
+# Ignoriranje dataset-a
+data/images/
+data/labels/
+data/splits/
+data/train.csv
+
+# Ignoriranje rezultata treninga
+runs/detect/
+
+# Ignoriranje modela (PyTorch težine)
+*.pt
+
+# Ignoriranje privremenih datoteka
+*.log
+*.tmp
+
+# Ignoriranje Python cache-a
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignoriranje virtualnog okruženja (ako ga koristite)
+venv/
+.env
+
+# Opcionalno: Ako ne želite pratiti konfiguracijske datoteke
+dataset.yaml
+
+# Ignoriranje specifičnih datoteka
+app_1.py
+app_2.py
+app_3.py
