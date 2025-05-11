@@ -1,0 +1,149 @@
+:root {
+    --primary-dark: #1d3557;
+    --primary: #457b9d;
+    --primary-light: #a8dadc;
+    --bg-light: #f1faee;
+    --neutral: #6c757d;
+}
+
+body {
+    background: #f8fafc;
+}
+
+.sidebar-card {
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--primary-light) 100%);
+    border-radius: 20px;
+    box-shadow: 0 2px 16px 0 rgba(69, 123, 157, 0.07);
+    padding: 1.2rem 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-title {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0.7rem 0 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.title {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+.subtitle {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,0.07);
+    padding: 1.5rem 1.5rem 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-message {
+    background: linear-gradient(90deg, var(--primary-light) 0%, var(--bg-light) 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+}
+
+[data-testid="stFileUploaderDropzone"] {
+    border-radius: 14px;
+    border: 2px dashed var(--primary-light);
+    background-color: var(--bg-light);
+    padding: 1.2em 0.5em;
+    margin-bottom: 1em;
+    min-height: 80px;
+}
+
+[data-testid="stFileUploaderDropzone"] > div {
+    color: var(--primary);
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+button[kind="primary"], button[kind="secondary"] {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+button[kind="secondary"] {
+    padding: 0.6em 2em !important;
+}
+
+button[kind="primary"]:hover, button[kind="secondary"]:hover {
+    background-color: var(--primary-dark) !important;
+}
+
+.annotation-title, .panel-title {
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.panel-title {
+    border-left: 4px solid var(--primary);
+    padding-left: 0.5rem;
+}
+
+.metadata {
+    color: var(--neutral);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+[data-testid="stImage"] > img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stSelectbox label {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.streamlit-expanderHeader {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.streamlit-expanderContent {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem !important;
+}
+
+.stButton>button {
+    background-color: #2980b9;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s;
+}
+.stButton>button:hover {
+    background-color: #1c5980;
+}
+
+.section-header {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}

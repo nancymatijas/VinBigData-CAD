@@ -1,0 +1,44 @@
+<annotation>
+  <filename>00675cd546313f912cadd4ad54415d69.dicom</filename>
+  <size>
+    <width>2606</width>
+    <height>2992</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>Aortic enlargement</name>
+    <bndbox>
+      <xmin>1845</xmin>
+      <ymin>498</ymin>
+      <xmax>2203</xmax>
+      <ymax>827</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>Cardiomegaly</name>
+    <bndbox>
+      <xmin>545</xmin>
+      <ymin>1873</ymin>
+      <xmax>1774</xmax>
+      <ymax>2310</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>Aortic enlargement</name>
+    <bndbox>
+      <xmin>611</xmin>
+      <ymin>509</ymin>
+      <xmax>969</xmax>
+      <ymax>967</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>Atelectasis</name>
+    <bndbox>
+      <xmin>390</xmin>
+      <ymin>448</ymin>
+      <xmax>917</xmax>
+      <ymax>1053</ymax>
+    </bndbox>
+  </object>
+</annotation>

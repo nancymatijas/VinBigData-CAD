@@ -1,11 +1,8 @@
 # Ignoriranje dataset-a
-data/images/
-data/labels/
-data/splits/
-data/train.csv
+data
 
 # Ignoriranje rezultata treninga
-runs/detect/
+runs
 
 # Ignoriranje modela (PyTorch težine)
 *.pt
@@ -26,7 +23,5 @@ venv/
 # Opcionalno: Ako ne želite pratiti konfiguracijske datoteke
 dataset.yaml
 
-# Ignoriranje specifičnih datoteka
-app_1.py
-app_2.py
-app_3.py
+# Ignoriranje specifičnih datoteka/mapa
+app_staro

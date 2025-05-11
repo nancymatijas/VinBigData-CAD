@@ -26,7 +26,7 @@ class_colors = {
 
 def load_model():
     try:
-        return YOLO("runs/detect/train_yolo11s_2/weights/best.pt")
+        return YOLO("runs/detect/train_yolo11s/weights/best.pt")
     except Exception as e:
         st.error(f"Greška pri učitavanju modela: {e}")
         return None
