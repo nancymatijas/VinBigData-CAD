@@ -1,27 +1,38 @@
-# Ignoriranje dataset-a
-data
+# Data and model results
+data/
+runs/
+!runs/detect/train_yolo11s/weights/best.pt
+app/img/
+*.csv
+*.xlsx
 
-# Ignoriranje rezultata treninga
-runs
-
-# Ignoriranje modela (PyTorch težine)
+# Model files (PyTorch, TensorFlow, Scikit-learn)
 *.pt
+*.pth
 
-# Ignoriranje privremenih datoteka
+# Logs and temporary files
 *.log
 *.tmp
 
-# Ignoriranje Python cache-a
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 
-# Ignoriranje virtualnog okruženja (ako ga koristite)
+# Virtual environment and environment files
 venv/
+.venv/
 .env
 
-# Opcionalno: Ako ne želite pratiti konfiguracijske datoteke
-dataset.yaml
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
 
-# Ignoriranje specifičnih datoteka/mapa
-app_staro
+# Configuration files (optional)
+dataset.yaml
+config.yaml
+
+# Old or test code
+app_staro/
+app_original.py
