@@ -1,6 +1,9 @@
 # Data and model results
 data/
 runs/
+!runs/detect/
+!runs/detect/train_yolo11s/
+!runs/detect/train_yolo11s/weights/
 !runs/detect/train_yolo11s/weights/best.pt
 app/img/
 *.csv
