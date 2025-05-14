@@ -5,3 +5,4 @@ pydicom
 streamlit-img-label
 pascal-voc-writer
 ultralytics
+opencv-python-headless>=4.6.0
