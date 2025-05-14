@@ -1,14 +1,14 @@
 from ultralytics import YOLO
 
 def evaluate_model():
-    model = YOLO("runs/detect/train_yolo11s/weights/best.pt") 
+    model = YOLO("../runs/detect/train_yolo11s/weights/best.pt") 
 
     results = model.val(
-        data="dataset.yaml",  
+        data="../dataset.yaml",  
         imgsz=896,  
         batch=16,   
         conf=0.15,
-        iou=0.5,
+        iou=0.4,
         name="val"
     )
 
