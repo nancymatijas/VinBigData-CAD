@@ -35,7 +35,3 @@ venv/
 # Configuration files (optional)
 dataset.yaml
 config.yaml
-
-# Old or test code
-app_staro/
-app_original.py
