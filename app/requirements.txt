@@ -3,3 +3,4 @@ pandas
 numpy
 pydicom
 streamlit-img-label
+pascal-voc-writer
