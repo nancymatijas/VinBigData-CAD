@@ -33,5 +33,4 @@ venv/
 .DS_Store
 
 # Configuration files (optional)
-dataset.yaml
 config.yaml

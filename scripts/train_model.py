@@ -4,18 +4,18 @@ import torch
 def main():
     if torch.cuda.is_available():
         device = 0  
-        print(f"GPU je dostupan: {torch.cuda.get_device_name(device)}")
+        print(f"GPU is available: {torch.cuda.get_device_name(device)}")
     else:
         device = 'cpu'
-        print("GPU nije dostupan. Trening će se izvršavati na CPU-u.")
+        print("GPU is not available. Training will be performed on the CPU.")
 
-    yaml_path = "dataset.yaml"
+    yaml_path = "../dataset.yaml"
     model = YOLO("yolo11s.pt")
 
     results = model.train(
         data=yaml_path,
         device=device,  
-        epochs=100,
+        epochs=150,
         imgsz=896,  
         batch=16,  
         freeze=5,   
@@ -25,11 +25,11 @@ def main():
         augment=True,  
         workers=4,                 
         save_period=10, 
-        patience=5,   
-        name="train _yolo11"
+        patience=10,   
+        name="train_yolo11"
     )
 
-    print("Trening završen!")
+    print("Training completed!")
 
 if __name__ == '__main__':
     main()

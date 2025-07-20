@@ -1,7 +1,8 @@
 import xml.etree.ElementTree as ET
+import io
 import os
 
-def save_annotations(uploaded_file, rects, labels, original_width, original_height):
+def generate_xml_bytes(uploaded_file, rects, labels, original_width, original_height):
     annotation = ET.Element("annotation")
     ET.SubElement(annotation, "filename").text = uploaded_file.name
     size = ET.SubElement(annotation, "size")
@@ -24,9 +25,10 @@ def save_annotations(uploaded_file, rects, labels, original_width, original_heig
             ET.SubElement(bbox, "xmax").text = str(x_max)
             ET.SubElement(bbox, "ymax").text = str(y_max)
         except Exception as e:
-            print(f"Greška pri spremanju: {e}")
+            print(f"Error generating XML: {e}")
 
-    xml_path = os.path.join("img", f"{os.path.splitext(uploaded_file.name)[0]}.xml")
-    os.makedirs(os.path.dirname(xml_path), exist_ok=True)
     ET.indent(annotation)
-    ET.ElementTree(annotation).write(xml_path)
+    xml_io = io.BytesIO()
+    ET.ElementTree(annotation).write(xml_io, encoding="utf-8")
+    xml_bytes = xml_io.getvalue()
+    return xml_bytes
