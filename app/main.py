@@ -76,7 +76,6 @@ else:
         <h3>Instructions</h3>
         <ul>
             <li>Upload DICOM scans for automated anomaly detection using deep learning.</li>
-            <li>Compare AI predictions with clinical reference annotations.</li>
             <li>Edit and validate detected findings interactively.</li>
             <li>Generate structured radiology reports based on detected and edited anomalies.</li>
         </ul>
