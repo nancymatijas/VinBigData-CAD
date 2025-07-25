@@ -8,5 +8,4 @@ streamlit-img-label
 opencv-python-headless>=4.6.0
 pascal_voc_writer
 reportlab
-libgl1
 
