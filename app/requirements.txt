@@ -6,3 +6,4 @@ Pillow
 pydicom
 streamlit-img-label
 opencv-python-headless>=4.6.0
+pascal_voc_writer
