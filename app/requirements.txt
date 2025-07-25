@@ -1,8 +1,8 @@
 streamlit
+ultralytics
 pandas
 numpy
+Pillow
 pydicom
 streamlit-img-label
-ultralytics
 opencv-python-headless>=4.6.0
-reportlab
