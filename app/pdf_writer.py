@@ -59,11 +59,10 @@ def generate_pdf_bytes(
             "The lungs are well inflated and clear. No evidence of abnormalities is present."
         )
     elif len(findings) == 1:
-        findings_text = f"A finding is identified in the lungs: {findings[0]}."
+        findings_text = f"There is radiographic evidence of: {findings[0]}."
     else:
         findings_text = (
-            "The following findings are present in the lungs: " +
-            ", ".join(sorted(set(findings))) + "."
+            "Radiographic findings include: " + ", ".join(sorted(set(findings))) + "."
         )
     max_content_width = 500
     y_findings = y - 17
@@ -72,6 +71,26 @@ def generate_pdf_bytes(
         c.drawString(55, y_findings, line)
         y_findings -= 16
     y = y_findings
+
+    c.setFont(mono_bold, 12)
+    c.drawString(40, y, "IMPRESSIONS:")
+    c.setFont(mono, 12)
+    if not findings:
+        impression_text = "No radiographic signs of disease."
+    elif len(findings) == 1:
+        impression_text = f"Imaging findings are consistent with: {findings[0]}."
+    else:
+        impression_text = (
+            "Imaging findings are consistent with the following: " +
+            ", ".join(sorted(set(findings))) + "."
+        )
+    y_impressions = y - 17
+    lines = wrap_text_to_width(c, impression_text, max_content_width, fontname=mono, fontsize=12)
+    for line in lines:
+        c.drawString(55, y_impressions, line)
+        y_impressions -= 16
+    y = y_impressions
+
 
     if image is not None:
         img_buffer = io.BytesIO()
